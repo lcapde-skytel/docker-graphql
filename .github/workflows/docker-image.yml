@@ -35,6 +35,11 @@ jobs:
           echo "Fin del login"
           echo "New Version: $NEW_VERSION !!!"
 
+      - name: Docker Echo Message
+        run: |
+          echo "Iniciando echo message"
+          echo "New Version: $NEW_VERSION !!!"
+
       # - name: Build Docker Image
       #   run: |
       #     docker build -t ${{ secrets.DOCKER_USER }}/docker-graphql:${{ steps.version.outputs.version }} .
