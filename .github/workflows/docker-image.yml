@@ -28,10 +28,14 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t ${{ secrets.DOCKER_USER }}/docker-graphql:0.0.2 .
+          docker push ${{ secrets.DOCKER_USER }}/docker-graphql:latest .
+
 
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.DOCKER_USER }}/docker-graphql:0.0.2
+          docker push ${{ secrets.DOCKER_USER }}/docker-graphql:latest
+
 
       # Descomenta esto si quieres construir la imagen
       # - name: Build the Docker image
